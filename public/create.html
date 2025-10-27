@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"/><title>Create</title><link rel="stylesheet" href="/styles.css"/></head><body>
+<header class="topbar"><div class="container"><a href="/" class="logo"><img src="/images/images (1).jpeg" height="60"></a><nav id="nav"></nav></div></header>
+<main class="container">
+    <div class="form-container">
+        <h2>Create New Post</h2>
+        <form id="createForm" enctype="multipart/form-data">
+            <input name="title" placeholder="Enter your post title" required/>
+            <textarea name="content" rows="6" placeholder="Write your post content here..." required></textarea>
+            <div class="file-input">
+                <label for="image">Add an image (optional)</label>
+                <input type="file" name="image" id="image" accept="image/*"/>
+            </div>
+            <button class="btn">Create Post</button>
+        </form>
+        <div id="msg"></div>
+    </div>
+</main>
+<script src="/_nav.js"></script>
+<script src="/create_bundle.js"></script></body></html>

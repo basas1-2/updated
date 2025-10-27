@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Dashboard</title><link rel="stylesheet" href="/styles.css"/></head>
+<body>
+  <header class="topbar"><div class="container"><a href="/" class="logo"><img src="/images/images (1).jpeg" height="60"></a><nav id="nav"></nav></div></header>
+  <main class="container">
+    <h2>Your Dashboard</h2>
+    <section id="profileArea">
+      <div id="avatarWrap"><img id="avatarPreview" height="80"/></div>
+      <form id="avatarForm" enctype="multipart/form-data"><input type="file" name="avatar"/><button>Upload Avatar</button></form>
+    </section>
+    <section>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <h3>Your posts</h3>
+        <a href="/create.html" class="btn">Create New Post</a>
+      </div>
+      <div id="feed"></div>
+    </section>
+  </main>
+  <script src="/_nav.js"></script>
+  <script src="/dashboard_bundle.js"></script>
+</body></html>
