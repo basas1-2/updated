@@ -1,5 +1,5 @@
 const Blog = require('../models/Blog');
-const upload = require("../config/cloudinary"); // ✅ Cloudinary middleware
+const upload = require("../config/multer"); // ✅ Cloudinary middleware
 
 // 📸 Middleware for single image upload
 exports.uploadMiddleware = upload.single('image');
