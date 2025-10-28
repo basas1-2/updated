@@ -37,7 +37,7 @@ exports.create = async (req,res) => {
           await sharpLib(filePath).resize({ width: 800, withoutEnlargement: true }).toFile(tmp);
           fs.renameSync(tmp, filePath);
         }else{
-          const Jimp = require('jimp');
+          const Jimp = require('jimp').Jimp;
           const img = await Jimp.read(filePath);
           const w = img.bitmap.width;
           if(w > 800){
