@@ -1,13 +1,11 @@
-import express from 'express';
-import upload from '../config/multer.js';
-import * as blogController from '../controllers/blogController.js';
-
+const express = require('express');
 const router = express.Router();
+const blogController = require('../controllers/blogController');
 
 router.get('/api/list', blogController.list);
-router.post('/api', upload.single('image'), blogController.create);
+router.post('/api', blogController.uploadMiddleware, blogController.create);
 router.get('/api/:id', blogController.get);
-router.put('/api/:id', upload.single('image'), blogController.update);
+router.put('/api/:id', blogController.uploadMiddleware, blogController.update);
 router.delete('/api/:id', blogController.remove);
 
-export default router;
+module.exports = router;
